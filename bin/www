@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var app = require("../app");
+var http = require("http");
+
+// settings
+app.set("port", process.env.PORT || 3000);
+app.listen(app.get("port"), () => {
+  console.log(`API de correo electrónico escuchando en el ${app.get("port")}`);
+});
